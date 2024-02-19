@@ -4,9 +4,12 @@ import { Hex2Rgba } from "utils/helpers"
 
 export const Home = styled.div`
     background-image: url('/images/bg.jpeg');
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     min-height:100vh;
     height:100%;
+    width: 100%;
 `
 
 export const Bg = styled.div`
@@ -28,6 +31,10 @@ export const Bg = styled.div`
         width:100%;
         color:${Hex2Rgba("#1B5072", .32)}
     }
+`
+
+export const ProjectName = styled.div`
+    font-size: 34px;
 `
 
 export const Container = styled.div`
@@ -109,7 +116,7 @@ export const WAddress = styled.div`
 export const Launch = styled.div<{showMintedNfts?:string}>`
     margin-top:16px;
     min-height:769px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.80);
     box-shadow: 0px 11.8109px 53.1492px rgba(0, 0, 0, 0.35);
     border-radius: 16px;
     padding:32px;
@@ -161,7 +168,7 @@ export const LaunchBg = styled.div`
 `
 
 export const Mid = styled.div`
-    flex:.33;
+    flex:.10;
 `
 
 export const Loading = styled.div`
@@ -214,6 +221,11 @@ export const TotalMintedTitle = styled.div`
 `
 
 export const TotalMintedValue = styled.div`
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: ${color.black}
     & span{
         font-weight:500;
     }
@@ -223,7 +235,9 @@ export const TotalMintedProgress = styled.div<{value:number}>`
     margin-top:8px;
     border-radius:69px;
     height:12px;
-    background-color: #F43F5E;
+    background-color: ${color.white};
+    border: 0.5px solid;
+    border-color: ${color.primary};
     transition:all .3s ease-in-out;
     overflow:hidden;
     &:after{
@@ -232,7 +246,7 @@ export const TotalMintedProgress = styled.div<{value:number}>`
         display:block;
         width:${props => props.value}%;
         height:100%;
-        background-color:${color.black};
+        background-color:${color.primary};
         border-radius:69px;
     }
 `

@@ -527,7 +527,7 @@ const Home = () => {
         <C.Home>
             <C.Container>
                 <C.Header>
-                    <C.Logo src="/images/logo.png" />
+                    <C.ProjectName>Lighthouse</C.ProjectName>
                     {wallet === null && (
                         <C.WalletConnect onClick={openWalletConnect}>Connect Wallet</C.WalletConnect>
                     )}
@@ -558,9 +558,10 @@ const Home = () => {
                                         <C.TotalMinted>
                                             <C.TotalMintedInfo>
                                                 <C.TotalMintedTitle>TOTAL MINTED</C.TotalMintedTitle>
-                                                <C.TotalMintedValue>{Math.floor((collection.mintedSupply / collection.supply * 100) * 100) / 100}% <span>{collection.mintedSupply}/{collection.supply}</span></C.TotalMintedValue>
+            
                                             </C.TotalMintedInfo>
                                             <C.TotalMintedProgress value={Math.floor((collection.mintedSupply / collection.supply * 100) * 100) / 100}></C.TotalMintedProgress>
+                                            <C.TotalMintedValue style={{ color: "#000"}}><span style={{ marginRight: "5px"}}>{collection.mintedSupply}/{collection.supply}</span> {Math.floor((collection.mintedSupply / collection.supply * 100) * 100) / 100}% </C.TotalMintedValue>
                                         </C.TotalMinted>
 
                                         <C.Description>{config.description}</C.Description>
