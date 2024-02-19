@@ -346,6 +346,9 @@ export const MintInfo = styled.div`
 
 export const Price = styled.div`
     color:${color.black};
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     & span{
         color:${color.black};

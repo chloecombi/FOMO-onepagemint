@@ -21,6 +21,8 @@ import axios from "axios"
 const LIGHTHOUSE_CONTRACT_ATLANTIC_2 = "sei12gjnfdh2kz06qg6e4y997jfgpat6xpv9dw58gtzn6g75ysy8yt5snzf4ac"
 const LIGHTHOUSE_CONTRACT_PACIFIC_1 = "sei1hjsqrfdg2hvwl3gacg4fkznurf36usrv7rkzkyh29wz3guuzeh0snslz7d"
 
+const max = 100
+
 const getLighthouseContract = (network: string) => {
     if (network === "pacific-1") {
         return LIGHTHOUSE_CONTRACT_PACIFIC_1;
@@ -255,6 +257,10 @@ const Home = () => {
         setAmount(amount + 1)
     }
 
+    const maxAmount = () => {
+        amountInput.current.value = max
+        setAmount(max)
+    }
     const decrementAmount = () => {
         if (amount > 1) {
             amountInput.current.value = amount - 1
@@ -628,7 +634,7 @@ const Home = () => {
                                                 <C.AmountButton onClick={incrementAmount}>
                                                     &#43;
                                                 </C.AmountButton>
-                                                <C.AmountButton onClick={incrementAmount} style={{ marginLeft: "20px"}}>
+                                                <C.AmountButton onClick={maxAmount} style={{ marginLeft: "20px"}}>
                                                    Max
                                                 </C.AmountButton>
                                             </C.Amount>
