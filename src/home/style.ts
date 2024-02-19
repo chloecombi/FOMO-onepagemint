@@ -3,7 +3,8 @@ import { color } from "styles/theme"
 import { Hex2Rgba } from "utils/helpers"
 
 export const Home = styled.div`
-    background-color: ${color.bg};
+    background-image: url('/images/bg.jpeg');
+    background-position: center;
     min-height:100vh;
     height:100%;
 `
@@ -62,8 +63,8 @@ export const Logo = styled.img`
 `
 
 export const WalletConnect = styled.button`
-    background-color:${color.primary};
-    color:${color.black};
+    background-color: ${color.primary};
+    color:${color.white};
     padding:0px 24px;
     height:43px;
     display:flex;
@@ -108,11 +109,12 @@ export const WAddress = styled.div`
 export const Launch = styled.div<{showMintedNfts?:string}>`
     margin-top:16px;
     min-height:769px;
-    background: linear-gradient(180deg, #15232D 0%, #0A141B 100%);
+    background: #fff;
     box-shadow: 0px 11.8109px 53.1492px rgba(0, 0, 0, 0.35);
     border-radius: 16px;
-    padding:70px 56px;
+    padding:32px;
     display:flex;
+    flex-direction: row-reverse;
     position:relative;
     &::before {
         pointer-events: none;
@@ -221,7 +223,7 @@ export const TotalMintedProgress = styled.div<{value:number}>`
     margin-top:8px;
     border-radius:69px;
     height:12px;
-    background-color:#263039;
+    background-color: #F43F5E;
     transition:all .3s ease-in-out;
     overflow:hidden;
     &:after{
@@ -230,7 +232,7 @@ export const TotalMintedProgress = styled.div<{value:number}>`
         display:block;
         width:${props => props.value}%;
         height:100%;
-        background-color:${color.white};
+        background-color:${color.black};
         border-radius:69px;
     }
 `
@@ -260,7 +262,7 @@ export const Phases = styled.div`
 `
 
 export const Phase = styled.div<{active:string,switch?:string}>`
-    background-color:${props => props.active === 'true' ? color.secondaryLight : color.secondary};
+    background-color:${props => props.active === 'true' ? color.primary : color.secondary};
     color:${props => props.active === 'true' ? color.white : color.whiteShade};
     position:relative;
     border-radius:8px;
@@ -295,12 +297,14 @@ export const PhaseTop = styled.div`
 `
 
 export const PhaseTitle = styled.div`
-    color:${color.primary};
+    color:${color.white};
+    font-weight: 600;
+    text-transform: capitalize;
 `
 
 export const PhaseDate = styled.div`
     & span{
-        color:${color.whiteShade};
+        color:${color.white};
     }
 `
 
@@ -334,16 +338,17 @@ export const Image = styled.div`
 
 export const MintInfo = styled.div`
     display:flex;
+    flex-direction: column;
     justify-content:space-between;
     align-items:center;
     margin-top:24px;
 `
 
 export const Price = styled.div`
-    color:${color.whiteShade};
-
+    color:${color.black};
+    margin-top: 20px;
     & span{
-        color:${color.white};
+        color:${color.black};
         font-weight:500;
     }
 `
@@ -352,37 +357,40 @@ export const Amount = styled.div`
     display:flex;
     align-items:center;
     padding:8px;
-    background-color:${color.secondaryLight};
     border-radius:8px;
 `
 
 export const AmountButton = styled.div`
-    width:24px;
-    height:24px;
     border-radius:8px;
+    padding: 10px 20px;
     cursor:pointer;
-    color:${color.whiteShade};
+    color:${color.black};
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:${color.secondary};
+    border: 2px solid;
+    font-size: 16px;
+    border-color: ${color.primary};
     transition:all .1s ease-in-out;
     &:hover{
-        background-color:${Hex2Rgba(color.secondary, .8)};
+        background-color:${Hex2Rgba(color.primary, .8)};
     }
     &:active{
-        background-color:${Hex2Rgba(color.secondary, .5)};
+        background-color:${Hex2Rgba(color.primary, .5)};
     }
     user-select:none;
 `
 
 export const AmountValue = styled.input`
     margin:0 16px;
-    width:40px;
-    background-color:transparent;
-    border:none;
+    width: 60px;
+    height: 50px;
+    background-color:${color.primary};
+    border: 2px solid;
+    border-color: ${color.primary};
+    border-radius: 12px;
     color:${color.white};
-    font-size:14px;
+    font-size:20px;
     font-weight:500;
     text-align:center;
 
@@ -400,7 +408,7 @@ export const MintButton = styled.button`
     padding:16px 0;
     border-radius:8px;
     background-color:${color.primary};
-    color:${color.black};
+    color:${color.white};
     font-size:18px;
     font-weight:500;
     cursor:pointer;

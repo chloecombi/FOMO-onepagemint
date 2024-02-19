@@ -519,7 +519,6 @@ const Home = () => {
 
     return (
         <C.Home>
-            <C.Bg><Bg /></C.Bg>
             <C.Container>
                 <C.Header>
                     <C.Logo src="/images/logo.png" />
@@ -549,7 +548,7 @@ const Home = () => {
                             {!showMintedNfts && (
                                 <>
                                     <C.LaunchInfo>
-                                        <C.Title>{config.name}</C.Title>
+                                        <C.Title style={{ color: "#000"}}>{config.name}</C.Title>
                                         <C.TotalMinted>
                                             <C.TotalMintedInfo>
                                                 <C.TotalMintedTitle>TOTAL MINTED</C.TotalMintedTitle>
@@ -614,16 +613,13 @@ const Home = () => {
                                     </C.LaunchInfo>
                                     <C.Mid></C.Mid>
                                     <C.LaunchMint>
-                                        <C.TitleMobile>
+                                        <C.TitleMobile style={{ color: "#000"}}>
                                             {config.name}
                                         </C.TitleMobile>
                                         <C.Image>
-                                            <img src="/images/launch.png" alt="launch" />
+                                            <img src="/images/launch.jpeg" alt="launch" />
                                         </C.Image>
                                         <C.MintInfo>
-                                            <C.Price>
-                                                Price: <span>{new BigNumber(currentPhase.unit_price).div(1e6).times(amount).toString()} SEI</span>
-                                            </C.Price>
                                             <C.Amount>
                                                 <C.AmountButton onClick={decrementAmount}>
                                                     &minus;
@@ -632,7 +628,13 @@ const Home = () => {
                                                 <C.AmountButton onClick={incrementAmount}>
                                                     &#43;
                                                 </C.AmountButton>
+                                                <C.AmountButton onClick={incrementAmount} style={{ marginLeft: "20px"}}>
+                                                   Max
+                                                </C.AmountButton>
                                             </C.Amount>
+                                            <C.Price>
+                                                Price: <span>{new BigNumber(currentPhase.unit_price).div(1e6).times(amount).toString()} SEI</span>
+                                            </C.Price>
                                         </C.MintInfo>
                                         <C.MintButton onClick={mint} disabled={walletWhitelisted === false || collection.supply - collection.mintedSupply <= 0}>
                                             {collection.supply - collection.mintedSupply <= 0 ? (
