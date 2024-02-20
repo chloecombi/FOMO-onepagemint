@@ -35,6 +35,12 @@ export const Bg = styled.div`
 
 export const ProjectName = styled.div`
     font-size: 34px;
+    color:#E2C100;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 `
 
 export const Container = styled.div`
@@ -252,9 +258,10 @@ export const TotalMintedProgress = styled.div<{value:number}>`
 `
 
 export const Description = styled.div`
-    color:${color.whiteShade};
+    color:${color.black};
     font-size:14px;
     margin-top:32px;
+    font-weight: bolder;
 `
 
 export const Links = styled.div`
@@ -312,7 +319,7 @@ export const PhaseTop = styled.div`
 
 export const PhaseTitle = styled.div`
     color:${color.white};
-    font-weight: 600;
+    font-weight:600;
     text-transform: capitalize;
 `
 
@@ -355,7 +362,7 @@ export const MintInfo = styled.div`
     flex-direction: column;
     justify-content:space-between;
     align-items:center;
-    margin-top:24px;
+    margin-top:5px;
 `
 
 export const Price = styled.div`
@@ -363,7 +370,7 @@ export const Price = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 5px;
     & span{
         color:${color.black};
         font-weight:500;
@@ -421,6 +428,7 @@ export const AmountValue = styled.input`
 `
 
 export const MintButton = styled.button`
+    text-transform:uppercase;
     width:100%;
     padding:16px 0;
     border-radius:8px;
@@ -447,6 +455,7 @@ export const MintButton = styled.button`
         border:none;
         background-color:${Hex2Rgba(color.primary, .5)};
     }
+
 `
 
 export const MintedBalance = styled.div`
