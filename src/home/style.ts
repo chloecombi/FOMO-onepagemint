@@ -268,10 +268,11 @@ export const Links = styled.div`
     display:flex;
     gap: 1.2rem;
     margin-top: 25px;
+    color:${color.link};
 `
 
 export const Link = styled.a`
-    color:${color.primary};
+    color:${color.link};
     font-size: 25px;
     &:hover{
         opacity: 80%;
@@ -428,7 +429,7 @@ export const AmountValue = styled.input`
 `
 
 export const MintButton = styled.button`
-    text-transform:uppercase;
+    text-transform: uppercase;
     width:100%;
     padding:16px 0;
     border-radius:8px;
