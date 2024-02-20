@@ -1,23 +1,19 @@
 {
-    "name": "My Project",
-    "description": "",
-    "website": "",
-    "twitter": "",
-    "discord": "",
-    "rpc": "https://rpc.atlantic-2.seinetwork.io/",
-    "network": "atlantic-2",
-    "collection_address": "sei14j9tu68ml3c6fpp7pc7md0g43dx48rmzvqtf0t2jdnqqlf5ek8ws2m0qge",
+    "name":"LIVE MINT TEST",
+    "description":"SSS LIVE TEST ON MAIN NET",
+    "website":"",
+    "twitter":"",
+    "discord":"",
+    "rpc": "https://rpc.sei-apis.com",
+    "network": "pacific-1",
+    "collection_address":"sei18pkpzhu709puw24hyc06pcdqetuxn00hqn8398wdlwa6awr5lwhs09x6fd", 
     "nft_name_type": "default",
-    "groups": [
-      {
-        "name": "whitelist",
-        "allowlist": [
-          "sei14v72v7hgzuvgck6v6jsgjacxnt34gj06qnx53d",
-          "sei1t22vwusjlxg4vp7gttsx7n2y9u4k0vv9lpk2ge"
-        ]
-      },
-      {
-        "name": "public"
-      }
+    "groups":[
+       
+        {
+            "name": "public",
+            "allowlist": [
+        "sei10mlnumg6xvxaxw92tm23na46wqdk37tk9pd740"]
+        }
     ]
 }
