@@ -527,7 +527,7 @@ const Home = () => {
         <C.Home>
             <C.Container>
                 <C.Header>
-                    <C.ProjectName>Lighthouse</C.ProjectName>
+                    <C.ProjectName>FOMO Launchpad</C.ProjectName>
                     {wallet === null && (
                         <C.WalletConnect onClick={openWalletConnect}>Connect Wallet</C.WalletConnect>
                     )}
