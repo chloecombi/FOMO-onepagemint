@@ -3,7 +3,7 @@ import { color } from "styles/theme"
 import { Hex2Rgba } from "utils/helpers"
 
 export const Home = styled.div`
-    background-image: url('/images/bg.jpeg');
+    background-image: url('/images/mintbackground.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ export const Bg = styled.div`
 
 export const ProjectName = styled.div`
     font-size: 34px;
-    color:#E2C100;
+    color:#FFED00;
     text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
