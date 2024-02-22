@@ -57,7 +57,7 @@ export const Container = styled.div`
 `
 
 export const Header = styled.div`
-    padding-top:76px;
+    padding-top:50px;
     display:flex;
     justify-content:space-between;
     align-items:center;
