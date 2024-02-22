@@ -1,19 +1,19 @@
 {
-    "name":"LIVE MINT TEST",
-    "description":"SSS LIVE TEST ON MAIN NET",
-    "website":"",
-    "twitter":"",
-    "discord":"",
+    "name": "Snazzy Society II",
+    "description": "Snazzy Saurians Society is a distinguished collection of unique Saurians that traverse the blockchain. Our platform prioritizes growth, innovation, and a fun environment while placing great value on individual identity. It's your one-stop destination for growth, innovation, and success",
+    "website":"https://snazzysociety.com/",
+    "twitter":"https://twitter.com/SnazzySociety",
+    "discord":"https://discord.gg/MZx7nSjyfd",
     "rpc": "https://rpc.sei-apis.com",
     "network": "pacific-1",
-    "collection_address":"sei18pkpzhu709puw24hyc06pcdqetuxn00hqn8398wdlwa6awr5lwhs09x6fd", 
+    "collection_address":"sei14r6w8f4c3vadyfx2lh0lfy0w3mlwmve96f8rhpwq48su9z7hrzqq4jh6g8", 
     "nft_name_type": "default",
     "groups":[
        
         {
-            "name": "public",
+            "name": "whitelist",
             "allowlist": [
-        "sei10mlnumg6xvxaxw92tm23na46wqdk37tk9pd740"]
+        "sei1whv6lz4tylva07rmc57edsv7vvfcrd3a8s22xd"]
         }
     ]
 }
