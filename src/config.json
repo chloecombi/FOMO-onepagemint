@@ -13,12 +13,7 @@
       
         {
             "name": "public",
-            "allowlist": [
-        "sei1whv6lz4tylva07rmc57edsv7vvfcrd3a8s22xd",
-        "sei1lpfgk4g2usunwepjsmepp504sktdsdfvuhqnmh",
-        "sei1sqvwrk0azcq2n760sfjwqwgn2c0ygqk8x2z25d"
-    
-    ]
+            
         }
     ]
 }
