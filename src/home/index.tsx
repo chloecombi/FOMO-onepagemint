@@ -607,7 +607,7 @@ const Home = () => {
                                                         )}
                                                     </C.PhaseTop>
                                                     <C.PhaseBottom>
-                                                        {phase.max_tokens > 0 ? phase.max_tokens + ' Per Wallet •' : ''} {new BigNumber(phase.unit_price).div(1e6).toString()} SEI
+                                                        4 Per Wallet {new BigNumber(phase.unit_price).div(1e6).toString()} SEI
                                                     </C.PhaseBottom>
                                                     {(!phase.noend && new Date(phase.end_time) < new Date()) && (
                                                         <C.PhaseBadge>
